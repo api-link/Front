@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.aichner-christian.com/" target="_blank" rel="noopener noreferrer">
-    <img src="https://www.aichner-christian.com/img/logo/apilink_sm.png" alt="Api Link Logo" height="150">
+    <img src="https://www.aichner-christian.com/img/logo/apilink.png" alt="Api Link Logo" height="150">
   </a>
 </p>
 
