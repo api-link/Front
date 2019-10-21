@@ -27,10 +27,28 @@ class SideNavbar extends React.Component{
 
   constructor(props){
     super(props);
+    this.state = {
+      expanded: false
+    }
+  }
+
+  componentDidMount = () => {
+    let exp = localStorage.getItem('menu');
+    // Create boolean out of string
+    let expNormalized = exp === "true" ? true : false;
+    // Tell the parent component if expanded or not
+    this.props.handleToggle(expNormalized);
+    // Do the actual change
+    this.setState({
+      expanded: expNormalized
+    });
   }
 
   toggle = (exp) => {
     this.props.handleToggle(exp);
+    this.setState({
+      expanded: exp
+    }, () => localStorage.setItem('menu',exp));
   }
 
   render(){
@@ -40,6 +58,7 @@ class SideNavbar extends React.Component{
               // Add your code here
           }}
           onToggle={(exp) => this.toggle(exp)}
+          expanded={this.state.expanded}
         >
           <SideNav.Toggle />
           <SideNav.Nav defaultSelected="home">
