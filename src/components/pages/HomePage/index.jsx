@@ -68,9 +68,13 @@ class HomePage extends React.Component {
         return(
           <p>Settings</p>
         )
-      case "api-list":
+      case "api-explorer":
         return(
           <APIList />
+        )
+      case "api-library":
+        return(
+          <p>API Library</p>
         )
       default:
         return(
