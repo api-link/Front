@@ -20,9 +20,14 @@ import {
 } from 'mdbreact';
 
 //> Components
+// Molecules
 import {
   SideNavbar,
 } from '../../molecules';
+// Organisms
+import {
+  APIList,
+} from '../../organisms/subpages';
 
 //> Images
 // Too be added
@@ -31,6 +36,7 @@ class HomePage extends React.Component {
 
   state = {
     containerPaddingLeft: "60px",
+    page: "home",
   }
 
   navToggle = (exp) => {
@@ -45,6 +51,33 @@ class HomePage extends React.Component {
       containerPaddingLeft: width
     });
   }
+  
+  navSelect = (selected) => {
+    this.setState({
+      page: selected
+    });
+  }
+
+  renderPage = () => {
+    switch(this.state.page){
+      case "home":
+        return(
+          <p>Home</p>
+        );
+      case "settings":
+        return(
+          <p>Settings</p>
+        )
+      case "apis":
+        return(
+          <APIList />
+        )
+      default:
+        return(
+          <p>Home</p>
+        );
+    }
+  }
 
   render() {
 
@@ -54,15 +87,15 @@ class HomePage extends React.Component {
       <div>
         <SideNavbar 
         handleToggle={this.navToggle}
+        handleSelect={this.navSelect}
         />
         <div 
         className="main-container"
         style={{paddingLeft: this.state.containerPaddingLeft}}
         >
           <MDBContainer fluid>
-            <p>Test</p>
+            {this.renderPage()}
           </MDBContainer>
-          
         </div>
       </div>
     );

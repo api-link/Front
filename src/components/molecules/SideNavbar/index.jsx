@@ -51,12 +51,14 @@ class SideNavbar extends React.Component{
     }, () => localStorage.setItem('menu',exp));
   }
 
+  select = (selected) => {
+    this.props.handleSelect(selected);
+  }
+
   render(){
       return(
         <SideNav
-          onSelect={(selected) => {
-              // Add your code here
-          }}
+          onSelect={(selected) => this.select(selected)}
           onToggle={(exp) => this.toggle(exp)}
           expanded={this.state.expanded}
         >
@@ -64,6 +66,14 @@ class SideNavbar extends React.Component{
           <SideNav.Nav defaultSelected="home">
             <div className="w-100" />
             <NavItem eventKey="home">
+              <NavIcon className="flex-center d-flex">
+                <MDBIcon icon="home" size="lg"/>
+              </NavIcon>
+              <NavText>
+                Dashboard
+              </NavText>
+            </NavItem>
+            <NavItem eventKey="apis">
               <NavIcon className="flex-center d-flex">
                 <MDBIcon icon="home" size="lg"/>
               </NavIcon>
