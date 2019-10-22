@@ -14,7 +14,7 @@ import {
 class Footer extends React.Component{
     render(){
         return(
-            <MDBFooter color="agency-red" className="font-small pt-4 mt-4">
+            <MDBFooter color="api-light" className="font-small pt-4 mt-4">
                 <MDBContainer className="text-center text-md-left">
                     <MDBRow>
                     <MDBCol md="6">
@@ -60,9 +60,9 @@ class Footer extends React.Component{
                     </MDBCol>
                     </MDBRow>
                 </MDBContainer>
-                <div className="footer-copyright text-center py-3">
+                <div className="footer-copyright text-center">
                     <MDBContainer fluid>
-                        &copy; {new Date().getFullYear()} Copyright: 
+                        &copy; 2018 - {new Date().getFullYear()} Copyright: 
                         <a href="https://www.aichner-christian.com" target="_blank" rel="noopener noreferrer"> Werbeagentur Christian Aichner </a>
                     </MDBContainer>
                 </div>
