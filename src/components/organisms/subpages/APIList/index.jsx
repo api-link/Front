@@ -37,6 +37,21 @@ const data = [
     featured: false,
     activateAble: true,
     documentation: "https://docs.breezometer.com/api-documentation/air-quality-api/v2/",
+  },
+  {
+    name: "Weather",
+    company: "Breezometer",
+    logo: breezometerIcon,
+    categories: [
+      "Environmental",
+      "Weather"
+    ],
+    price: undefined,
+    rating: 4.2,
+    supported: true,
+    featured: false,
+    activateAble: true,
+    documentation: "https://docs.breezometer.com/api-documentation/weather-api/v1/",
   }
 ]
 
@@ -192,12 +207,9 @@ class APIList extends React.Component {
     }
   }
   
-  handleSwitchChange = (api) => {
-    console.log(api);
-
+  handleSwitchChange = (api, uniqueName) => {
     this.setState({
-      ["use_"+api.company.toLowerCase()+"_"+api.name.replace(" ","_").toLowerCase()]: 
-      !this.state["use_"+api.company.toLowerCase()+"_"+api.name.replace(" ","_").toLowerCase()]
+      [uniqueName]: !this.state[uniqueName]
     });
   }
 
@@ -209,6 +221,7 @@ class APIList extends React.Component {
       <hr/>
       <MDBRow>
       {data.map((api, key) => {
+        let uniqueName = "use_"+api.company.toLowerCase()+"_"+api.name.replace(" ","_").toLowerCase();
         return(
           <MDBCol md="2" key={key}>
             <MDBCard>
@@ -257,8 +270,10 @@ class APIList extends React.Component {
                     <div className="ml-auto p-2 mb-auto mt-auto">
                       <MDBSwitch 
                       disabled={api.activateAble ? false : true}
-                      checked={this.state.use_breezometer_air_quality ? true : false}
-                      onChange={() => this.handleSwitchChange(api)}
+                      checked={
+                        this.state[uniqueName] ? true : false
+                      }
+                      onChange={() => this.handleSwitchChange(api, uniqueName)}
                       labelLeft=""
                       labelRight=""
                       />
