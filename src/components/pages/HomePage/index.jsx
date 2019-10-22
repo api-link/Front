@@ -58,6 +58,27 @@ class HomePage extends React.Component {
     });
   }
 
+  componentDidUpdate = () => {
+    // Update page title
+    switch(this.state.page){
+      case "home":
+        document.title = "Overview";
+        break;
+      case "settings":
+        document.title = "Settings";
+        break;
+      case "api-explorer":
+        document.title = "API Explorer";
+        break;
+      case "api-library":
+        document.title = "API Library";
+        break;
+      default:
+        document.title = "API Link - Built to make APIs more accessible and usable";
+        break;
+    }
+  }
+
   renderPage = () => {
     switch(this.state.page){
       case "home":
