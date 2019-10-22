@@ -1,7 +1,3 @@
-$dark: #211c1c;
-$blue: #62beff;
-$red: #ff6262;
-$light: #ededed;
 
 /** 
  * SPDX-License-Identifier: (EUPL-1.2)

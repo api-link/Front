@@ -1,13 +1,9 @@
 //> Components
 // Import all components to export them for easy access from parent components
-import Footer from './Footer';
-import Navbar from './Navbar';
-import SideNavbar from './SideNavbar';
+import APIList from './APIList';
 
 export {
-    Footer,
-    Navbar,
-    SideNavbar,
+    APIList,
 };
 
 /** 
