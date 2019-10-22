@@ -29,7 +29,7 @@ class SideNavbar extends React.Component{
     super(props);
     this.state = {
       expanded: false
-    }
+    };
   }
 
   componentDidMount = () => {
@@ -117,7 +117,7 @@ class SideNavbar extends React.Component{
             </NavItem>
         </SideNav.Nav>
       </SideNav>
-    )
+    );
   }
 }
 

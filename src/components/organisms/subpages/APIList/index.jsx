@@ -53,7 +53,7 @@ const data = [
     activateAble: true,
     documentation: "https://docs.breezometer.com/api-documentation/weather-api/v1/",
   }
-]
+];
 
 class APIList extends React.Component {
 

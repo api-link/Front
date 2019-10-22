@@ -88,15 +88,15 @@ class HomePage extends React.Component {
       case "settings":
         return(
           <p>Settings</p>
-        )
+        );
       case "api-explorer":
         return(
           <APIList />
-        )
+        );
       case "api-library":
         return(
           <p>API Library</p>
-        )
+        );
       default:
         return(
           <p>Home</p>
@@ -106,7 +106,7 @@ class HomePage extends React.Component {
 
   render() {
 
-    console.log(this.state);
+    //console.log(this.state);
 
     return (
       <div>
