@@ -68,7 +68,7 @@ class HomePage extends React.Component {
         return(
           <p>Settings</p>
         )
-      case "apis":
+      case "api-list":
         return(
           <APIList />
         )

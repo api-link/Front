@@ -73,12 +73,12 @@ class SideNavbar extends React.Component{
                 Dashboard
               </NavText>
             </NavItem>
-            <NavItem eventKey="apis">
+            <NavItem eventKey="api-list">
               <NavIcon className="flex-center d-flex">
-                <MDBIcon icon="home" size="lg"/>
+                <MDBIcon icon="list-alt" size="lg"/>
               </NavIcon>
               <NavText>
-                Dashboard
+                API List
               </NavText>
             </NavItem>
             <NavItem eventKey="charts">
