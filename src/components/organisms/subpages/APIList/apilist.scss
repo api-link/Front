@@ -1,0 +1,18 @@
+#apilist{
+  .switch label input[type=checkbox]:checked + .lever:after{
+    background-color: #62beff;
+  }
+  .switch label input[type=checkbox]:checked + .lever{
+    background-color: darken(#62beff, 15%);
+  }
+  .switch{
+    label{
+      margin-bottom: 0;
+    }
+  }
+}
+
+/** 
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019 Werbeagentur Christian Aichner
+ */
